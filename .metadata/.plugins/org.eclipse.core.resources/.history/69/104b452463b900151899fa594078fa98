@@ -1,0 +1,16 @@
+/* 
+ * Calculates and prints miles per gallon for a car that can drive 350 miles on a 
+ * 15 gallon tank of gas
+ */
+class Gas_miles {
+	public static void main(String args[]){
+		int gallonsPerTank;
+		int milesPerTank;
+		double milesPerGallon;
+
+		gallonsPerTank = 15;
+		milesPerTank = 350;
+		milesPerGallon = (double)milesPerTank/gallonsPerTank; // (double) casts milesPerTank to a double
+		System.out.println("Miles per gallon = " + milesPerGallon);
+	}
+}

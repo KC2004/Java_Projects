@@ -1,0 +1,2 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>Took out TestContactList and TestPerson from main(. change first letter&\#x0A;to lower case for both methods.</message>\r\n<message>Took out TestPerson() and TestContactList() from main.</message>\r\n<message>Put KJ - initials in isPhoneNumber() code.</message>\r\n<message>put initals (KJ) on code I wrote.</message>\r\n</messages>
+eclipse.preferences.version=1

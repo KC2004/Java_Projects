@@ -1,0 +1,126 @@
+ Working on Assignment
+Assignment #6 - "class List"
+Continue Later  Finish   Instructions
+ Assignment #6 - "class List"     (worth 5 points)
+Your assignment is not complete until:
+
+- You select, copy and paste the run of your program from the console to 
+the bottom of your source code 
+file and save it.
+
+and
+
+- you upload your source code file to the Etudes Assignment submission and click "finish".
+
+How to avoid losing points:
+
+- At the end of each assignment you will find the rubric titled "In order to 
+receive full credit 
+your program must:" This is what I will use to grade your assignment. If you have 
+questions 
+about any of these things, you must ask in class or in the public Discussion.
+
+- If you have trouble getting your program to work, look at the home page of our 
+Etudes website to find places to get help. Do not submit an incomplete program!
+
+- If you submit your source code together with something that is not a true 
+recording of the run of that source code, this will be seen as academic 
+dishonesty and you will receive a 0 with no chance to resubmit.
+
+- If you submit your assignment late, it will receive a point off for each week after the due date.
+
+- All Program Guidelines must be followed. You can find the Program Guidelines in the Modules.
+
+(worth 5 points)Save
+Note that this assignment is due the same day as you will take the midterm exam.
+
+Objective:         use arrays
+
+Material from:    Wu, Chapter 10 only to page 555
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Application programmers often need to store a sequence of numbers. 
+A sequence of numbers might be used by an application programmer to 
+store the midterm scores for a class of students, a list of the 
+high temperatures in a given month in a given city, or data 
+collected over time from a device like a scale.
+
+It would be very useful for an application programmer to be able to 
+easily construct and manipulate an object that can store a list of 
+numbers. Java provides an array that can do this, but a programmer 
+cannot easily perform simple operations on an array as a whole. 
+For example, Java will not print every element of an array with just 
+one System.out.println() statement; a programmer must use a loop 
+in order to do that.
+
+For this assignment you will be defining a class List, where one 
+Object stores and manipulates a list of  integer values. Your class 
+List will provide methods that make it easy for the programmer to 
+perform simple operations on the list as a whole without having to 
+use a loop. As usual, the first step is to write class TestList 
+that will be used to test class List. This test program will have 
+no user input; just output to the console to see that it works.
+
+class List has one private instance variable:
+
+1) The array that holds the list of integer values is a private 
+member of class List.
+
+class List needs the following three public methods:
+
+1) List(int numInts)
+
+      this is the constructor, it constructs a List with numInts 
+      values of type integer. This does no printing to the console, 
+      and no reading from the keyboard.
+
+2) toString()
+
+      Returns a String containing all the elements in the array.
+
+3) fillWithRandom()
+
+      Stores pseudorandom integers into every element of the array, 
+      this method does no printing to the console!
+
+As stated above, your first step is to write a class TestList that 
+instantiates a new List object and then calls toString() to see that 
+the constructor worked (it should show a 0 in every element of the list.) 
+Your class Testlist will then call fillWithRandom() and then call toString() 
+again to see that the array did indeed get filled with random integers.
+
+After you think that everything works, add code to your class TestList to 
+instantiate a second List object with a different number of integers 
+stored in it. Run your program to make sure that one main() can have 
+two different lists in it at the same time, and the two lists are of two 
+different sizes.
+
+Note that this assignment requires that class List contain only a few 
+useful methods. In the future, more methods will be added to class 
+List to make it more generally useful.
+
+In order to receive full credit, your program must:
+
+- include Javadoc comments for each class and each method. The comment 
+for the class must tell what one object of the class represents; 
+the comment for each method must tell what the method does with its 
+parameters, what it returns, whether it does any reading or writing, 
+etc. See the Module "Week 3: JavaDoc Comments" for information 
+about JavaDoc comments.
+
+- contain a main() that instantiates two different List objects of 
+different sizes in the same program.
+
+- print immediately after creating a new List to prove that the 
+list was constructed with all zeroes in it.
+
+- declare all member variables private.
+
+- define your constructor to perform NO output.
+
+- define your fillWithRandom() method to perform NO output.
+
+Find and select the file from your computer and then click on "Upload" to upload it.
+Choose File  Upload
+Continue Later Finish   Instructions

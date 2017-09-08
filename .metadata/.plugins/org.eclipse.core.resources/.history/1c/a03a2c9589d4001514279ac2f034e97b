@@ -1,0 +1,15 @@
+
+public class TestList{
+	public static void main(String args[]){
+		List myList = new List(10);
+		System.out.println("This should print a list of 10 comma separated zeroes: " + myList);
+		myList.fillWithRandom();
+		System.out.println("This should print a list of 10 comma separated random numbers: " + myList);
+		
+		List secondList = new List(20);
+		System.out.println("This should print a list of 20 comma separated zeroes: " + secondList);
+		secondList.fillWithRandom();
+		System.out.println("This should print a list of 20 comma separated random numbers: " + secondList);
+	}
+
+}

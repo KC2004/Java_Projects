@@ -1,0 +1,15 @@
+
+public class ClassQuiz {
+	public static void main(String args[]){
+
+		int f;
+		int h;
+		int x;
+
+		f = 9;
+		h = 7;
+		x = 4;
+		
+		System.out.println((1+h)*(1-f)/((double)f*3/(h*h-x)));		
+	}
+}

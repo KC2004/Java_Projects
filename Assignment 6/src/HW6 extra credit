@@ -1,0 +1,30 @@
+ Working on Assignment
+Extra Credit
+Continue Later  Finish   Instructions
+(worth 2 points)Save
+In this extra credit assignment, worth a maximum of 2 points, you will add some methods 
+to the class List that you wrote for Assignment #6.
+
+Step 1) Make any and all modifications to your class List that were suggested 
+by me in the comments I made to your submission of Assignment #6.
+
+Step 2) Add a method called sort() to class List that sorts the integers in the List in ascending order.
+
+Step 3) Add a method called getElement() that takes an int index as parameter 
+and returns the element that is in the list at that index. Make sure that you 
+check that the int index parameter is within the bounds of the array before 
+you use it to access the array.
+
+Step 4) Write a main() that proves that all of the methods in class List work, 
+even the methods that you wrote and tested for Assignment #6.
+
+As always, you will save a LOT of time by writing the call in the main() to a 
+method BEFORE you write the method definition itself. Don't forget to follow 
+all program guidelines and paste the run to the bottom of one of your source code files.
+
+NOTE that you have only one try for submitting this extra credit assignment! 
+That is because we all really need to be focussing on the project at this point in the term.
+
+Find and select the file from your computer and then click on "Upload" to upload it.
+Choose File  Upload
+Continue Later Finish   Instructions

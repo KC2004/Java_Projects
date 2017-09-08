@@ -1,0 +1,21 @@
+/**
+ * 
+ * @author kushlani
+ * Creates 2 List objects of size 10 and 20. Prints out the lists to see if list elements are 
+ * created and initialized to zeros: then fill lists with random numbers and prints the lists 
+ * out to check if working properly. 
+ */
+public class TestList{
+	public static void main(String args[]){
+		String printStr = "Should print a list of ";
+		List myList = new List(10);
+		System.out.println(printStr + "10 zeroes: " + myList);
+		myList.fillWithRandom();
+		System.out.println(printStr + "10 random numbers: " + myList);
+		
+		List secondList = new List(20);
+		System.out.println(printStr + "20 zeroes: " + secondList);
+		secondList.fillWithRandom();
+		System.out.println(printStr + "20 random numbers: " + secondList);
+	}
+}

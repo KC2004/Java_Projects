@@ -1,0 +1,182 @@
+/**
+ * runs the contact list program - SL, body KJ
+ **/
+public class RunContactList {
+	public static void main(String[] args) {
+		ContactList myList = new ContactList();
+		myList.addContact();
+		System.out.println(myList);
+		myList.addContact();
+		System.out.println(myList);
+		
+	}
+
+	/**
+	 * Test for the Person class - KJ, body SL/KJ
+	 */
+	public static void testPerson(){
+		Person person1;
+		person1 = new Person();
+		person1.setLastName("lo");
+		System.out.println("will return null in place of last name for now, " + person1.getLastName());
+		person1.setFirstName("Shu");
+		System.out.println("will return null in place of first name for now, " + person1.getLastName());
+		person1.setStreetAddress1("2670 Abrego Road");
+		System.out.println("will return null in place of streetaddress1 for now, " + person1.getStreetAddress1());
+		person1.setStreetAddress2("apartment 4");
+		System.out.println("will return null in place of streetaddress2 for now, " + person1.getStreetAddress2());
+		person1.setCity("Palo Alto");
+		System.out.println("will return null in place of city for now, " + person1.getCity());
+		person1.setZip("64827");
+		System.out.println("will return null in place of zip for now, " +  person1.getZip());
+		person1.setState("CA");
+		System.out.println("will return null in place of state for now, " + person1.getState());
+		person1.setEmailAddress("Shuistlo@gmail.com");
+		System.out.println("this will true if an email is valid, "  + Person.isValidEmail("Shuistlo@gmail.com"));
+		System.out.println("will return null in place of emailAddress for now, " + person1.getEmailAddress());
+		System.out.println("this will true if kushi@lane-jayasinha.com is valid, "  + Person.isValidEmail("kushi@lane-jayasinha.com"));
+		System.out.println("will return null in place of emailAddress for now, " + person1.getEmailAddress());
+		person1.setPhoneNumber("(242) 820-5212");
+		//KJ...
+		person1.setPhoneNumber("(242820-5212////");
+		System.out.println("phone number, (242820-5212////, should return (242) 820-5212 "  + person1.getPhoneNumber());
+		
+		System.out.println("phone number, (232) 820-5212, is valid should return true. "  + Person.isValidPhone("(232) 820-5212"));
+		System.out.println("phone number, 2320-5212, is valid should return false. "  + Person.isValidPhone("(2320-5212"));
+		System.out.println("phone number, %$#6781230987, is valid should return true. "  + Person.isValidPhone("(%$#6781230987"));
+		System.out.println("phone number, 4089425089, is valid should return true. "  + Person.isValidPhone("4089425089"));
+		//... end KJ
+		System.out.println("will return null in place of phoneNumber for now, " + person1.getPhoneNumber());
+		person1.setNotes("this is a test");
+		System.out.println("will return null in place of notes for now, " + person1.getNotes());
+		System.out.println("the toString method should return (black space), " + person1.toString());
+	}
+	
+	/**
+	 * Test for the ContactList class - KJ, body SL
+	 */
+	public static void testContactList(){
+		ContactList contactListTest;
+		contactListTest = new ContactList();
+		contactListTest.addContact();
+		System.out.println("this method will return nothing for now "+ contactListTest.findContact());
+		System.out.println("this method will just return nothing for now " + contactListTest.sortedContactList());
+		System.out.println("this method will just return nothing for now " + contactListTest.toString());
+		contactListTest.save();
+		String menu = "";
+		System.out.println(menu);
+		System.out.println("this program works");
+	}
+}
+// Run that saves both contacts
+/*
+Last Name: 
+Hall
+First Name: 
+Alex
+Street Address1: 
+1234 My Lane
+Street Address2: 
+
+City: 
+San Jose
+State: 
+CA
+Zip: 
+95117
+email: 
+AllyCat@home.com
+Phone number: 
+3216540987
+Note: 
+Awesome.
+Alex Hall
+1234 My Lane 
+San Jose, CA 95117
+email: AllyCat@home.com
+Phone: (321)654-0987
+Notes: Awesome.
+
+
+Last Name: 
+Lane
+First Name: 
+Ben
+Street Address1: 
+4321 Leaf Streat
+Street Address2: 
+#3
+City: 
+San Jose
+State: 
+CA
+Zip: 
+95112
+email: 
+Bensilver.com
+Please enter valid email: 
+Ben@silver.com
+Phone number: 
+321543
+Please enter valid Phone: 
+1234567890
+Note: 
+Awesome 2
+Alex Hall
+1234 My Lane 
+San Jose, CA 95117
+email: AllyCat@home.com
+Phone: (321)654-0987
+Notes: Awesome.
+
+Ben Lane
+4321 Leaf Streat #3
+San Jose, CA 95112
+email: Ben@silver.com
+Phone: (123)456-7890
+Notes: Awesome 2
+
+ */
+
+// Run to show that program cancels adding contact when ! is input
+
+/*
+Last Name: 
+Doe
+First Name: 
+!
+Contact was not added to the list.
+
+Last Name: 
+Doe
+First Name: 
+!
+Contact was not added to the list.
+
+
+*/
+
+// Run to show that Last and First name is required.
+
+/*
+Last Name: 
+
+New contact requires a Last Name. Please enter a Last Name: 
+Doe
+First Name: 
+Jane
+Street Address1: 
+1234
+Street Address2: 
+!
+
+Last Name: 
+Doe
+First Name: 
+
+New contact requires a First Name. Please enter a First Name: 
+Jane
+Street Address1: 
+!
+
+ */

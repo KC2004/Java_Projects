@@ -1,0 +1,89 @@
+Write a Java class where one object of the class stores one street address which 
+includes house number and street, city, state, zip code and country. 
+One object represents one address, so your class will be named StreetAddress. 
+A main() that uses class StreetAddress looks like this:
+
+/**
+
+ * Tests class StreetAddress by creating two objects of class StreetAddress,
+
+ * sets the values in them, and prints out the two objects.
+
+ */
+
+class TestStreetAddress {
+
+      public static void main(String args[])  {
+
+            StreetAddress foothill;
+
+            foothill = new StreetAddress();
+
+            foothill.setHouse("12345 El Monte Road");
+
+            foothill.setCity("Los Altos Hills");
+
+            foothill.setState("CA");
+
+            foothill.setZip("94022");
+
+            foothill.setCountry("USA");
+
+            System.out.println(foothill.toString());
+
+            StreetAddress deanza;
+
+            deanza = new StreetAddress();
+
+            deanza.setHouse("21250 Stevens Creek Blvd.");
+
+            deanza.setCity("Cupertino");
+
+            deanza.setState("CA");
+
+            deanza.setZip("95014");
+
+            deanza.setCountry("USA");
+
+            System.out.println(deanza.toString());
+
+      }
+
+}
+
+You will use the code above for class TestStreetAddress to test your 
+class StreetAddress. The output from the main() above will look exactly 
+like this on the console:
+
+12345 El Monte Road
+
+Los Altos Hills, CA 94022
+
+USA
+
+21250 Stevens Creek Blvd.
+
+Cupertino, CA  95014
+
+USA
+
+As in your last assignment, please select, copy and paste the contents of the console to the bottom of your source code file so that you only need to submit one file to the Assignments tool in Etudes.
+
+In order to receive full credit your program must:
+
+- include Javadoc comments for each class and each method. The comment for the 
+class must tell what one object of the class represents; 
+the comment for each method must tell what the method does with its parameters, 
+what it returns, whether it does any reading or writing, etc.
+
+- include class TestStreetAddress exactly as it is in the assignment instructions.
+
+- generate output exactly as it is in the assignment instructions.
+
+- Not read any input from the user at runtime.
+
+- declare all of your member variables private.
+
+- follow all Program Guidelines.
+
+ 

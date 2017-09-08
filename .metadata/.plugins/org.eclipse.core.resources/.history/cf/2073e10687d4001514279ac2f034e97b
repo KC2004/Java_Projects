@@ -1,0 +1,50 @@
+import java.util.Random;
+/**
+ * 
+ * @author kushlani
+ * One object of this class holds a list of ints 
+ */
+public class List {
+	int[] list;
+	/**
+	 * constructor
+	 */
+	public List(){
+		
+	}
+	
+	/**
+	 * constructor with listSize as parameter
+	 */
+	public List(int listSize){
+		list = new int[listSize];
+	}
+	
+	/**
+	 * returns a string with all values of list
+	 */
+	public String toString(){
+		String strList = "["; 
+		for (int i=0; i<list.length; i++){
+			strList += list[i];
+			if (i != list.length){
+				strList += ",";
+			}
+			else{
+				strList += "]";
+			}
+		}
+		return strList;
+	}
+	
+	/**
+	 * fill list with random numbers
+	 */
+	public void fillWithRandom(){
+		Random rand = new Random();
+		for (int i=0; i<list.length; i++){
+			list[i] = rand.nextInt();
+		}
+		
+	}
+}

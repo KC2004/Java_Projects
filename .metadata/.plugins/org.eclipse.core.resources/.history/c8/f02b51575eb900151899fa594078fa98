@@ -1,0 +1,19 @@
+
+public class ClassQuiz {
+	public static void main(String args[]){
+
+		int f;
+		int h;
+		int x;
+		double result;
+
+		f = 9;
+		h = 7;
+		x = 4;
+		
+		System.out.println(((1+(double)h)*(1-f))/(3*f/((h*h)-x)));
+		
+		
+	}
+
+}

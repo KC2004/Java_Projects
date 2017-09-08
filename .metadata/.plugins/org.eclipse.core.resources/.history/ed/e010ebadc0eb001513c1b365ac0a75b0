@@ -1,0 +1,405 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileInputStream;
+import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
+/**
+ * one object in ContactList is a person from Person Class
+ * class ContactList creates an array of Person objects
+ * array can be added to, printed, saved, and can be searched for a contact
+ **/
+public class ContactList {
+	private ArrayList<Person> listOfContacts;
+
+	/**
+	 * constructor for contactList
+	 * will initialize the array size to be 0
+	 * will initialize listOfContacts to ArrayList<Person> object
+	 */
+	public ContactList() {
+		listOfContacts = new ArrayList<Person>();
+	}
+
+	/**
+	 * saves progress on the contact list to a file
+	 */
+	public void save() {
+
+	}
+	
+	public void addContact1(Person newPerson) {
+		listOfContacts.add(newPerson);
+	}
+
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person firstName variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  firstName for person object
+     * else will set firstName to value string entered
+	 */
+	public boolean readFirstName(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.print("First Name: ");
+			String tempFirstName1 = scanner.nextLine();
+			while(tempFirstName1.equals("")) {
+				System.out.println("New contact requires a First Name. Please enter a First Name: ");
+				tempFirstName1 = scanner.nextLine();
+			}
+			if(tempFirstName1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setFirstName(tempFirstName1);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person LastName variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  lastName for person object
+     * else will set lastName to value string entered
+	 */
+	public boolean readLastName(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+			
+			System.out.println("Last Name: ");
+			String tempLastName1 = scanner.nextLine();
+			while(tempLastName1.equals("")) {
+				System.out.println("New contact requires a Last Name. Please enter a Last Name: ");
+				tempLastName1 = scanner.nextLine();
+			}
+			if(tempLastName1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setLastName(tempLastName1);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person streetAddress1 variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  streetAddress1 for person object
+     * else will set streetAddress1 to value string entered
+	 */
+	public boolean readStreetAddress1(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("Street Address1: ");
+			String tempStreetAddress1 = scanner.nextLine();
+			if(tempStreetAddress1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setStreetAddress1(tempStreetAddress1);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person streetAddress2 variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  streetAddress2 for person object
+     * else will set streetAddress2 to value string entered
+	 */
+	public boolean readStreetAddress2(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("Street Address2: ");
+			String tempStreetAddress2 = scanner.nextLine();
+			if(tempStreetAddress2.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setStreetAddress2(tempStreetAddress2);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person city variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  city for person object
+     * else will set city to value string entered
+	 */
+	public boolean readCity(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("City: ");
+			String tempCity1 = scanner.nextLine();
+			if(tempCity1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setCity(tempCity1);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person state variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  state for person object
+     * else will set state to value string entered
+	 */
+	public boolean readState(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("State: ");
+			String tempState = scanner.nextLine();
+			if(tempState.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setState(tempState);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person zip variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  zip for person object
+     * else will set zip to value string entered
+	 */
+	public boolean readZip(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("Zip: ");
+			String tempZip1 = scanner.nextLine();
+			if(tempZip1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setZip(tempZip1);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person emailAddress variable
+	 * if invalid email is entered method function will ask for valid email address
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  emailAddress for person object
+     * else will set emailAddress to value string entered
+	 */
+	public boolean readEmailAddress(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("email: ");
+			String tempEmailAddress1 = scanner.nextLine();
+			if (tempEmailAddress1.equals("")) {
+				newContact.setEmailAddress(tempEmailAddress1);
+			}
+			boolean validEmail = Person.isValidEmail(tempEmailAddress1);
+			while((!tempEmailAddress1.equals("")) && (validEmail == false)) {
+				System.out.println("Please enter valid email: ");
+				tempEmailAddress1 = scanner.nextLine();
+				validEmail = Person.isValidEmail(tempEmailAddress1);
+				
+			}
+			if(tempEmailAddress1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setEmailAddress(tempEmailAddress1);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person phoneNumber variable
+	 * if invalid email is entered method function will ask for valid phone number
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  phoneNumber for person object
+     * else will set phoneNumber to value string entered
+	 */
+	public boolean readPhoneNumber(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("Phone number: ");
+			String tempPhoneNumber1 = scanner.nextLine();
+			if (tempPhoneNumber1.equals("")) {
+				newContact.setPhoneNumber(tempPhoneNumber1);
+			}
+			boolean validPhone = Person.isValidPhone(tempPhoneNumber1);
+			while((!tempPhoneNumber1.equals("")) && (validPhone == false)) {
+				System.out.println("Please enter valid Phone: ");
+				tempPhoneNumber1 = scanner.nextLine();
+				validPhone = Person.isValidPhone(tempPhoneNumber1);
+				
+			}
+			if(tempPhoneNumber1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setPhoneNumber(tempPhoneNumber1);
+		}
+		return finished;
+	}
+	
+	/**
+	 * SL, KJ, NK
+	 * if parameter finished is false 
+	 * asks for user input to define person notes variable
+	 * if "!" is input, method function will return True as a flag and will not
+	 * set  notes for person object
+     * else will set notes to value string entered
+	 */
+	public boolean readNotes(Person newContact, boolean finished) {
+		if (!finished) {
+			
+			Scanner scanner;
+			scanner = new Scanner (System.in);
+
+			System.out.println("Note: ");
+			String tempNote1 = scanner.nextLine();
+			if(tempNote1.equals("!")) {
+				finished = true;
+			}
+			else;
+			newContact.setNotes(tempNote1);
+		}
+		return finished;
+	}
+
+	/**
+	 * asks the user to add a contact
+	 * calls ContactList read methods for each person variable (lastName, firstName, emailAddress, etc...)
+	 * adds a contact to the array list
+	 * SL
+	 */
+	public void addContact() {
+		Person fullContact; 
+		fullContact = new Person();
+		boolean finished = false;
+		
+		finished = readLastName(fullContact, finished);
+		finished = readFirstName(fullContact, finished);
+		finished = readStreetAddress1(fullContact, finished);
+		finished = readStreetAddress2(fullContact, finished);
+		finished = readCity(fullContact, finished);
+		finished = readState(fullContact, finished);
+		finished = readZip(fullContact, finished);
+		finished = readEmailAddress(fullContact, finished);
+		finished = readPhoneNumber(fullContact, finished);
+		finished = readNotes(fullContact, finished);
+		
+		if (finished == false ) {
+			listOfContacts.add(fullContact);
+		}
+		else {
+			System.out.println("Contact was not added to the list.");
+		}
+	}
+
+	/**
+	 * searches for a contact
+	 * based on user input using the scanner
+	 * will check for upper/lower case spelling
+	 * finds and returns contact using toString person method
+	 */
+	public String findContact() {
+		String contact = " ";
+		
+		return contact;
+	}
+	
+	/**
+	 * returns all contacts in a list format with first name then last name above street address1 etc
+	 * contacts will be sorted in alphabetical order by last name
+	 * the string returned will be one long string with all contacts
+	 */
+	public String sortedContactList() {
+		String contacts= " ";
+ 
+		return contacts;
+	}
+	
+	/**
+	 * returns all contacts in a list format with first name then last name above street address1 etc
+	 * SL
+	 */
+	public static String strToPrintContacts(ArrayList<Person> listOfPersons) {
+		StringBuilder sb = new StringBuilder();
+		for (Person s : listOfPersons)
+		{
+		    sb.append(s);
+		    sb.append("\n");
+		}
+		String allContacts;
+		allContacts = sb.toString();
+		return allContacts;
+	}
+
+
+	
+	/**
+	 * returns all contacts in a list format with first name then last name above street address1 etc
+	 * SL
+	 */
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (Person s : listOfContacts)
+		{
+		    sb.append(s);
+		    sb.append("\n");
+		}
+		String allContacts;
+		allContacts = sb.toString();
+		return allContacts;
+	}
+}
+
+ 

@@ -1,0 +1,126 @@
+Objectives:         Use if,  if-else, and switch.
+
+                         Factor out repetitive statements.
+
+                         Define methods to manipulate the object from outside the class.
+
+Material from:     Wu textbook, Chapter 5
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The HiRisq Insurance company determines auto insurance rates based on a driver’s age, 
+number of tickets in the last three years, and the value of the car. Your task is to 
+create a new class called "Driver" where one object of class Driver stores and 
+calculates the data for one driver. Of course you will also need a second class 
+TestDriver to test your class Driver. Use the following as class TestDriver 
+to test your new class:
+
+/**
+ * Tests class Driver by reading the data, calculating and printing
+ * out the insurance premiums for four different drivers.
+ */
+class TestDriver {
+      public static void main(String args[])  {
+            Driver driver;
+            driver = new Driver();
+            driver.read();
+            System.out.println("Premium: $" + driver.premium());
+            driver.read();
+            System.out.println("Premium: $" + driver.premium());
+            driver.read();
+            System.out.println("Premium: $" + driver.premium());
+            driver.read();
+            System.out.println("Premium: $" + driver.premium());
+      }
+}
+
+Be sure that you understand what every line in the program above is supposed 
+to do before you proceed.
+
+Once you are ready to write the method that calculates the driver's premium, 
+use the following rules: The base premium is 5 percent of the value of the car. 
+Drivers under 25 years old pay 15 percent more and drivers from 25 through 29 
+pay 10 percent more. A driver with one ticket pays 10 percent over the 
+premium already figured. Two tickets draws a 25 percent extra charge; 
+three tickets adds 50 percent; and drivers with more than three tickets 
+are refused.
+
+Type the following values in when you run your program, user input is 
+shown in bold:
+
+Driver’s Age? 35
+
+Number of Tickets? 1
+
+Value of Car? 10000
+
+Premium: $550.00
+
+Driver’s Age? 29
+
+Number of Tickets? 2
+
+Value of Car? 15000
+
+Premium: $1031.25
+
+Driver’s Age? 19
+
+Number of Tickets? 3
+
+Value of Car? 850
+
+Premium: $73.31
+
+Driver’s Age? 81
+
+Number of Tickets? 4
+
+Value of Car? 12500
+
+Premium: $0
+
+Notes:
+
+• To calculate the premium, first apply the base rate of 5% * value of the car to get the base 
+premium, and then add a percentage of that premium for the age of the driver, and then add a 
+percentage of that premium for the number of tickets. For example, for the driver age 19:
+
+      Premium = (850 * .05)* 1.15 * 1.50 = 73.3125
+
+                            ^                ^         ^
+
+                    car value         age    tickets
+
+• Structure the branches in the method of class Driver so that you have NO code duplication
+
+• Once you get the output correct to the nearest penny, use class DecimalFormat in main() 
+to format the value that is returned from the premium() method. Your final output will show 
+just two digits to the right of the decimal point.
+
+In order to receive full credit:
+
+- Define all member variables private
+
+- include Javadoc comments for each class and each method. The comment for the class must 
+tell what one object of the class represents; the comment for each method must tell what 
+the method does with its parameters, what it returns, whether it does any 
+reading or writing, etc.
+
+- Define class TestDriver exactly as is specified in the assignment instructions. 
+The only change that you are allowed to make is to add an object of class DecimalFormat 
+to format the double that is returned from the premium() method.
+
+- Make sure your output is exactly as specified in the assignment instructions.
+
+- Have no repeated code in your premium() method.
+
+- Do not test for conditions that you know are true.
+
+- Define your premium() method with no input from keyboard and no output to screen.
+
+- Your premium() method must return a double
+
+- Follow all program guidelines
+
+Find and select the file from your computer and then click on "Upload" to upload it.

@@ -1,0 +1,109 @@
+ Working on Assignment
+Assignment #5 - "Saving Your Money"
+Continue Later  Finish   Instructions
+ Assignment #5 - "Saving Your Money"     (worth 5 points)
+Your assignment is not complete until:
+
+- you select, copy and paste the run of your program from the console to the bottom of your source code file and save it.
+
+and
+
+- you upload your source code file to the Etudes Assignment submission and click "finish".
+
+How to avoid losing points:
+
+- At the end of each assignment you will find the rubric titled "In order to receive full credit your program must:" This is what I will use to grade your assignment. If you have questions about any of these things, you must ask in class or in the public Discussion.
+
+- If you have trouble getting your program to work, look at the home page of our Etudes website to find places to get help. Do not submit an incomplete program!
+
+- If you submit your source code together with something that is not a true recording of the run of that source code, this will be seen as academic dishonesty and you will receive a 0 with no chance to resubmit.
+
+- If you submit your assignment late, it will receive a point off for each week after the due date.
+
+- All Program Guidelines must be followed. You can find the Program Guidelines in the Modules.
+
+(worth 5 points)Save
+Objective:         Practice with loops
+
+Material from:   Wu, Chapter 6
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Define a class where one object represents one savings account. Call your class “SavingsAccount”. 
+A savings account is made up of a deposit and an annual interest rate so these will be the private 
+member (aka "instance") variables of your class SavingsAccount. After you have successfully coded 
+and tested this class, you will have to write a more complicated main() that prints a table showing 
+how an initial deposit grows after a number of years.
+
+What will be the member methods for your class? You will need methods to set the value of each of 
+your member variables. You will also need a method that calculates and returns the future investment 
+value for the savings plan after a certain number of years. This member method will be 
+called futureInvestmentValue(). Because the method futureInvestmentValue() is also a member 
+of the class SavingsAccount, this method will automatically have access to the private member 
+variables, so you don’t need to send in values for the deposit nor the annual interest rate. 
+But the main() will need to tell the futureInvestmentValue() method how long the deposit 
+will be in the account, so the method will have a parameter for the number of years the 
+investment will stay in the bank.
+
+The following formula calculates the future investment value when an initialDeposit is left in a 
+bank account for some years which compounds interest monthly at monthlyInterestRate:
+futureInvestmentValue = initialDeposit * (1 + monthlyInterestRate) years*12
+            
+
+Here is a main() that will test whether your futureInvestmentValue() method works or not.
+
+/**
+ * Tests class SavingsAccount by creating a
+ * SavingsAccount object and printing
+ * the amount that would be in it after 10 years.
+ */
+class TestSavingsAccount  {
+    public static void main(String args[])  {
+          SavingsAccount saver;
+          saver = new SavingsAccount ();
+          saver.setDeposit(1000);
+          saver.setAnnualInterestRate(0.0325);
+          System.out.println(saver.futureInvestmentValue(10));
+          // prints the amount in the account after 10 years.
+          // expected output: 1383.42
+     }
+}
+
+Hint: Even though the main() sets the annual interest rate, the futureInvestmentValue() 
+method calculates using the corresponding monthly interest rate. This is because banks 
+usually advertise their annual interest rate but they actually compound the interest 
+monthly.
+
+Do not proceed with this assignment until the program above gives the expected output.
+
+Now the final part of this assignment is to modify the main() to print a table that 
+shows how much the deposit grows each year over a period of years. In order to complete 
+this part of the assignment, you will leave your class SavingsAccount untouched. The 
+rest of this assignment is to be completed by modifying the class TestSavingsAccount only.
+
+There will be one row in the table for each year, and the table will have two columns: 
+one for the number of the year and one for the amount in the account (including the 
+interest) 
+at the end of that year. Modify your main() so that it prints such a table by repeatedly 
+calling your futureInvestmentValue() method in class SavingsAccount. Note that you earn 
+more interest each month of each year because the interest is compounded. Under no 
+circumstances are you to modify the class SavingsAccount for this part of the assignment.
+
+In order to receive full credit, your program must:
+
+- include Javadoc comments for each class and each method. The comment for the class 
+must tell what one object of the class represents; the comment for each method must 
+tell what the method does with its parameters, what it returns, whether it does any 
+reading or writing, etc.
+
+- define the member function futureInvestmentValue() which does no reading from the 
+keyboard and no writing to the console
+
+- because the method futureInvestmentValue() calculates and returns a NUMBER, it 
+should not return a String.
+
+- declare all of your member variables private.
+
+Find and select the file from your computer and then click on "Upload" to upload it.
+Choose File  Upload
+Continue Later Finish   Instructions
